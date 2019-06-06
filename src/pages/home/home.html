@@ -1,9 +1,21 @@
-<ion-header>
+<!-- <ion-header >
   <ion-navbar>
-    <ion-title>MPay</ion-title>
+    <ion-title class="header" >MPay</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-    <img src="../../assets/imgs/example-card.png" style="width: 250px; height: auto;" class="center"/>
+<ion-content  class = "master"padding center text-center class="master">
+   <img src="../../assets/imgs/whiteLogoMpay.png" style="width: 250px; height: auto;" class="center"/> 
+   <ion-list>
+      <ion-item>
+        <ion-input class= "input"placeholder = "Username" [(ngModel)]="username" > </ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input  class="input" placeholder = "Password" type= "password" [(ngModel)]="password" ></ion-input>
+      </ion-item>
+      
+   </ion-list>
+
+   <button class="buttonLogin" ion-button full (click)="login()">Ingresar</button>
+   <button  class="buttonRegister" ion-button full color = "light" (click)="goRegister()"> Registrar</button>
 </ion-content>
